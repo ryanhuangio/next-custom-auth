@@ -1,30 +1,27 @@
-'use client'
+"use client";
 
-import './globals.css'
-import { Inter } from 'next/font/google'
-import NavBar from './components/nav'
-import Footer from './components/footer'
-import { ThemeProvider } from 'next-themes'
-import { GlobalContextProvider } from './context/cart-context'
+import "./globals.css";
+import { Montserrat } from "next/font/google";
+import NavBar from "./components/nav";
+import { ThemeProvider } from "next-themes";
 
-const inter = Inter({ subsets: ['latin'] })
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export default function RootLayout({
-    children
+  children,
 }: {
-    children: React.ReactNode
+  children: React.ReactNode;
 }) {
-    return (
-        <html lang="en">
-            <GlobalContextProvider>
-                <ThemeProvider attribute="class">
-                    <body className=" dark:bg-gray-900 dark:text-gray-300">
-                        <NavBar />
-                        <main className="py-0 px-0">{children}</main>
-                        <Footer />
-                    </body>
-                </ThemeProvider>
-            </GlobalContextProvider>
-        </html>
-    )
+  return (
+    <html lang="en">
+      <ThemeProvider attribute="class">
+        <body
+          className={`${montserrat.className} text-black bg-indigo-100 dark:bg-indigo-950 dark:text-indigo-300`}
+        >
+          <NavBar />
+          <main className="py-0 px-0">{children}</main>
+        </body>
+      </ThemeProvider>
+    </html>
+  );
 }
