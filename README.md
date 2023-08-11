@@ -9,6 +9,8 @@ Custom sign in page for Next 13 (App Router) using Next Auth.
 
 ## Get Started
 
-1. Configure environment `mv .env.local.sample .env && vi .env`
-2. Install dependencies `npm install`
-3. Run `npm run build && npm run start` or `npm run build && npm run dev`
+1. Clone repo `git clone https://github.com/ryanhuangio/next-custom-auth.git`
+2. Change directory `cd next-custom-auth`
+3. Configure environment `mv .env.local.sample .env && vi .env`
+4. Install dependencies `npm install`
+5. Run `npm run build && npm run start` or `npm run build && npm run dev`
